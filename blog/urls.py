@@ -3,8 +3,8 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-        url(r'^$', views.post_list),
-		url(r'^valores$', views.valores),
+        url(r'^$', views.indexmanos),
+		url(r'^ofertas$', views.ofertas),
 		url(r'^mision$', views.mision),
 		url(r'^vision$', views.vision),
 		url(r'^registro$', views.registro),

@@ -28,12 +28,12 @@
   <!-- Main Stylesheet File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-    Theme Name: BizPage
-    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  <link href="{% static 'css/slider.css' %}" rel="stylesheet">
+  <!-- Slider 
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  -->
 </head>
 
 <body>
@@ -55,17 +55,10 @@
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">Conócenos</a></li>
           <li><a href="#services">Servicios</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#skills">Tarifas</a></li>
           <li><a href="#team">Equipo</a></li>
-          <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
           <li><a href="#contact">Contacta</a></li>
+          <li><a href="/ofertas">Ofertas</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -87,8 +80,8 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Cuidamos de los tuyos</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                <p>Somos un grupo de profesionales expertos en cuidados y en la formación de las personas que cuidan, sean familiares o profesionales.</p>
+                <a href="#featured-services" class="btn-get-started scrollto">Empezar</a>
               </div>
             </div>
           </div>
@@ -97,9 +90,10 @@
             <div class="carousel-background"><img src="/static/blog/images/intro-carousel/2.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Estamos para ayudarte</h2>
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                <h2>¿Qué podemos hacer por ti?</h2>
+                <p>Escuchar tus necesidades y aportar  soluciones. Siguiendo siempre una estrategia basada en una atención integral, con el objetivo de facilitar tu día a día, en tu vida como cuidadora.</br>
+Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</p>
+                <a href="#featured-services" class="btn-get-started scrollto">Empezar</a>
               </div>
             </div>
           </div>
@@ -108,9 +102,10 @@
             <div class="carousel-background"><img src="/static/blog/images/intro-carousel/3.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Temporibus autem quibusdam</h2>
-                <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                <h2>Nuestra Metodología</h2>
+                <p>Cuidadoras con formación ofrecida por expertos con más de 20 años de experiencia.
+				Realizamos valoración individualizada para ofrecer el servicio que maás se ajuste a sus necesidades</p>
+                <a href="#featured-services" class="btn-get-started scrollto">Empezar</a>
               </div>
             </div>
           </div>
@@ -167,17 +162,17 @@
             <h4 class="title"><a href="">Cuéntanos tu necesidad</a></h4>
             <p class="description">Estamos para escucharte</p>
           </div>
-
+		  
           <div class="col-lg-4 box box-bg">
-            <i class="ion-ios-stopwatch-outline"></i>
-            <h4 class="title"><a href="">El tiempo que haga falta</a></h4>
-            <p class="description">Estamos a tu lado el tiempo que nos necesites</p>
-          </div>
-
-          <div class="col-lg-4 box">
             <i class="ion-ios-heart-outline"></i>
             <h4 class="title"><a href="">Cuidaremos de los que más te importan</a></h4>
             <p class="description">Nuestros cuidados arropan a quién más quieres</p>
+          </div>
+		  
+          <div class="col-lg-4 box">
+            <i class="ion-ios-stopwatch-outline"></i>
+            <h4 class="title"><a href="">El tiempo que haga falta</a></h4>
+            <p class="description">Estamos a tu lado el tiempo que nos necesites</p>
           </div>
 
         </div>
@@ -192,7 +187,7 @@
 
         <header class="section-header">
           <h3>Conócenos</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Somos conscientes de que cada caso requiere un abordaje diferente y de la diversidad de situaciones familiares y de cuidados que necesita cada tipo de pacientes. Avalamos este servicio con la garantía de una gran experiencia y formación en ese campo.</p>
         </header>
 
         <div class="row about-cols">
@@ -205,8 +200,8 @@
               </div>
               <h2 class="title"><a href="#">Nuestra Misión</a></h2>
               <p>
-                Conseguir instaurar en la sociedad un pensamiento sobre la importancia del cuidado a nuestros mayores en el sitio más importante para ellos.
-              </p>
+                Nuestro equipo centra su atención en prestar cuidados de apoyo de calidad que se ajusten a las necesidades diarias y particulares de las familias
+			  </p>
             </div>
           </div>
 
@@ -214,12 +209,10 @@
             <div class="about-col">
               <div class="img">
                 <img src="/static/blog/images/about-plan.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">Nuestros Valores</a></h2>
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              </p>
+              <h2 class="title"><a href="#">Nuestra Visión</a></h2>
+              <p>Ser un referente en el cuidado centrado en la persona mejorando las condiciones de vida de las personas, sus cuidadoras/es y familias.</p>
             </div>
           </div>
 
@@ -227,12 +220,14 @@
             <div class="about-col">
               <div class="img">
                 <img src="/static/blog/images/about-vision.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                <div class="icon"><i class="ion-ios-list-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">Nuestra Visión</a></h2>
-              <p>
-                Conseguir integrar a aquellos que más nos importan en la sociedad mostrando cómo todos jugamos un importante papel.
-              </p>
+              <h2 class="title"><a href="#">Nuestros Valores</a></h2>
+				<ul>
+					<li type="circle"><p>Liderazgo: enfermeras al frente de una atención integrada para ofrecer una atención de calidad.</p></li>
+					<li type="circle"><p>Integridad: Nuestro mejor aval es nuestro trabajo y compromiso con el cuidado.</p></li>
+					<li type="circle"><p>Responsabilidad: Dando respuesta a las necesidades planteadas en base al compromiso adquirido.</p></li>
+				</ul>
             </div>
           </div>
 
@@ -308,39 +303,91 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>Our Skills</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+          <h3>Nuestras Tarifas</h3>
+          <p>Indique el servicio que quiere disfrutar</p>
         </header>
+		
+<!--                               FINNN-->	
 
-        <div class="skills-content">
+    <div class="container">
 
-          <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">HTML <i class="val">100%</i></span>
+      <div class="price-box">
+
+        <form class="form-horizontal form-pricing" role="form">
+
+          <div class="price-slider">
+            <h4 class="great">Horas</h4>
+            <span>Mínimo 1 hora</span>
+            <div class="col-sm-12">
+              <div id="slider" type="range"></div>
+            </div>
+          </div>
+          <div class="price-slider">
+            <h4 class="great">Días</h4>
+            <span>Mínimo 1 día</span>
+            <div class="col-sm-12">
+              <div id="slider2"></div>
             </div>
           </div>
 
-          <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">CSS <i class="val">90%</i></span>
+          <div class="price-form">
+
+            <div class="form-group">
+              <label for="amount" class="col-sm-6 control-label">Presupuesto (€): </label>
+              <span class="help-text">Por favor seleccione horas</span>
+              <div class="col-sm-6">
+                <input type="hidden" id="amount" class="form-control">
+                <p class="price lead" id="amount-label"></p>
+                <span class="price">.00</span>
+              </div>
             </div>
+            <div class="form-group">
+              <label for="duration" class="col-sm-6 control-label">Días: </label>
+              <span class="help-text">Por favor seleccione días</span>
+              <div class="col-sm-6">
+                <input type="hidden" id="duration" class="form-control">
+                <p class="price lead" id="duration-label"></p>
+                <span class="price">días</span>
+              </div>
+            </div>
+            <hr class="style">
+            <div class="form-group total">
+              <label for="total" class="col-sm-6 control-label"><strong>Total: </strong></label>
+              <span class="help-text">Cálculo incompleto</span>
+              <div class="col-sm-6">
+                <input type="hidden" id="total" class="form-control">
+                <p class="price lead" id="total-label"></p>
+                <span class="price">.00</span>
+              </div>
+            </div>
+
           </div>
 
-          <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Aceptar <span class="glyphicon glyphicon-chevron-right pull-right" style="padding-right: 10px;"></span></button>
             </div>
           </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
-            </div>
-          </div>
-
-        </div>
-
+        </form>
       </div>
+
+    </div>
+	
+
+	<script src="{% static 'js/slider.js' %}" type="text/javascript"></script>
+	
+<!--                              
+	<div class="ui-field-contain">
+  <label for="slider-3">Input slider:</label>
+  <input type="range" name="slider-3" id="slider-3" value="25" min="0" max="100" data-theme="b" data-track-theme="a">
+</div>
+	
+<label for="slider-fill">Input slider:</label>
+<input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true">
+
+<input type="hidden" id="{{ id }}" name="{{ name }}"/>
+<div id="{{ id }}-range-max" class="slider"></div>
+<span id="{{ id }}valshower">{{ value }}</span> FINNN-->
     </section>
 
     <!--==========================
@@ -378,175 +425,8 @@
 
   			</div>
 
-       <!-- <div class="facts-img">
-          <img src="/static/blog/images/facts-img.png" alt="" class="img-fluid">
-        </div>-->
-
       </div>
     </section><!-- #facts -->
-
-    <!--==========================
-      Portfolio Section
-    ============================
-    <section id="portfolio"  class="section-bg" >
-      <div class="container">
-
-        <header class="section-header">
-          <h3 class="section-title">Our Portfolio</h3>
-        </header>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="/static/blog/images/portfolio/app1.jpg" class="img-fluid" alt="">
-                <a href="/static/blog/images/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">App 1</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="/static/blog/images/portfolio/web3.jpg" class="img-fluid" alt="">
-                <a href="/static/blog/images/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Web 3</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="/static/blog/images/portfolio/app2.jpg" class="img-fluid" alt="">
-                <a href="/static/blog/images/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">App 2</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="/static/blog/images/portfolio/card2.jpg" class="img-fluid" alt="">
-                <a href="/static/blog/images/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Card 2</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="/static/blog/images/portfolio/web2.jpg" class="img-fluid" alt="">
-                <a href="/static/blog/images/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Web 2</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="/static/blog/images/portfolio/app3.jpg" class="img-fluid" alt="">
-                <a href="/static/blog/images/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">App 3</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="/static/blog/images/portfolio/card1.jpg" class="img-fluid" alt="">
-                <a href="/static/blog/images/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Card 1</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="/static/blog/images/portfolio/card3.jpg" class="img-fluid" alt="">
-                <a href="/static/blog/images/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Card 3</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="/static/blog/images/portfolio/web1.jpg" class="img-fluid" alt="">
-                <a href="/static/blog/images/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Web 1</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
 
     <!--==========================
       Clients Section
@@ -575,7 +455,7 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>Testimonials</h3>
+          <h3>Opiniones</h3>
         </header>
 
         <div class="owl-carousel testimonials-carousel">
@@ -658,7 +538,7 @@
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Jose Ramón Riera</h4>
-                  <span>Chief Executive Officer</span>
+                  <span>Responsable Sanitario</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -672,11 +552,11 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="/static/blog/images/alex.jpg" class="img-fluid" alt="">
+              <img src="/static/blog/images/jorge.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Alejandro Torrado</h4>
-                  <span>CTO</span>
+                  <h4>Jorge López</h4>
+                  <span>Responsable Sanitario</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -690,11 +570,11 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="/static/blog/images/team-3.jpg" class="img-fluid" alt="">
+              <img src="/static/blog/images/alex.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>Product Manager</span>
+                  <h4>Alejandro Torrado</h4>
+                  <span>Responsable Tecnológico</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -708,11 +588,11 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="/static/blog/images/team-4.jpg" class="img-fluid" alt="">
+              <img src="/static/blog/images/loli.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
+                  <h4>Dolores Saavedra</h4>
+                  <span>Responsable Sanitario</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -736,8 +616,8 @@
       <div class="container">
 
         <div class="section-header">
-          <h3>Contact Us</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3>Contacta</h3>
+          <p>Contáctanos y nos pondremos en contacto contigo para ofrecerte el mejor de nuestros servicios de manera personalizada</p>
         </div>
 
         <div class="row contact-info">
@@ -745,7 +625,7 @@
           <div class="col-md-4">
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
+              <h3>Dirección</h3>
               <address>A108 Adam Street, NY 535022, USA</address>
             </div>
           </div>
@@ -753,7 +633,7 @@
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
+              <h3>Teléfono</h3>
               <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
             </div>
           </div>
@@ -771,23 +651,23 @@
         <div class="form">
           <div id="sendmessage">Your message has been sent. Thank you!</div>
           <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
+          <form action="/" method="post" >{% csrf_token %}
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validation"></div>
               </div>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
               <div class="validation"></div>
             </div>
             <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Cuéntanos que te interesa"></textarea>
               <div class="validation"></div>
             </div>
             <div class="text-center"><button type="submit">Send Message</button></div>
@@ -808,18 +688,17 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>BizPage</h3>
+            <h3>Manos para Ayudar</h3>
             <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#intro">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#about">Conócenos</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#services">Servicios</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#team">Equipo</a></li>
             </ul>
           </div>
 
@@ -879,10 +758,11 @@
   <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}" type="text/javascript"></script>
   <script src="{% static 'lib/touchSwipe/jquery.touchSwipe.min.js' %}" type="text/javascript"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="{% static 'contactform/contactform.js' %}" type="text/javascript"></script>
+  <script src="{% static 'js/contactform.js' %}" type="text/javascript"></script>
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
+  
 
 </body>
 </html>

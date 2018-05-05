@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.utils import timezone
 from django.contrib.auth import login, authenticate
+from django.core.mail import send_mail
 from .models import Post
 from .models import Usuario
 from .forms import UsuarioForm
@@ -29,8 +30,8 @@ def post_list(request):
 			
     return render(request, 'blog/indexmanos.html', {'form': form})
 	
-def valores(request):
-    return render(request, 'blog/valores.html', {})
+def ofertas(request):
+    return render(request, 'blog/blog_right_sidebar.html', {})
 def mision(request):
     return render(request, 'blog/mision.html', {})
 def vision(request):
@@ -38,7 +39,22 @@ def vision(request):
 def index(request):
     return render(request, 'blog/index.html', {})
 def indexmanos(request):
+    if request.method == "POST":
+        
+        #usuario = request.POST.__getitem__(name)	 
+        #print(usuario)
+        print("BENNE")
+        # send_mail(
+        # 'Subject here',
+        # 'Here is the message.',
+        # 'from@example.com',
+        # ['alpachemi@gmail.com'],
+        # fail_silently=False,
+        # )
+        return render(request, 'blog/indexmanos.html', {})
+			
     return render(request, 'blog/indexmanos.html', {})
+	
 def registro(request):
     if request.method == "POST":
         form = UsuarioForm(request.POST)
