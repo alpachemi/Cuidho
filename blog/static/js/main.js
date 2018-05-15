@@ -9,7 +9,9 @@ jQuery(document).ready(function( $ ) {
     }
   });
   $('.back-to-top').click(function(){
-    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
+    $('html, body').animate({
+        scrollTop: parseInt($("#contact").offset().top)
+    }, 2000);
     return false;
   });
 

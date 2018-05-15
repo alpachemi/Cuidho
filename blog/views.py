@@ -30,8 +30,6 @@ def post_list(request):
 			
     return render(request, 'blog/indexmanos.html', {'form': form})
 	
-def ofertas(request):
-    return render(request, 'blog/blog_right_sidebar.html', {})
 def mision(request):
     return render(request, 'blog/mision.html', {})
 def vision(request):
