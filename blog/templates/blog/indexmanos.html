@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Manos para Ayudar</title>
+  <title>Manos para Respirar</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="/static/blog/images/favicon.png" rel="icon">
-  <link href="/static/blog/images/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="/static/blog/images/logo_opt.png" rel="icon">
+  <link href="/static/blog/images/logo_opt.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
@@ -39,9 +39,9 @@
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">Manos para Ayudar</a></h1>
+        <h1><img src="/static/blog/images/logo_blanco.png"/><a href="#intro" class="scrollto">Manos para Respirar</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+         <!--<a href="#intro"><img src="/static/blog/images/logo_blanco.png" alt="" title="Manos para Respira" /></a>-->
       </div>
 
       <nav id="nav-menu-container">
@@ -299,6 +299,69 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
           <h3>Nuestras Tarifas</h3>
           <p>Indique el servicio que quiere disfrutar</p>
         </header>
+		
+		<div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="/static/blog/images/about-mission.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Entre semana</a></h2>
+			  
+				<input type="text" class="form-control" placeholder="Horas" id="num1" name="num1" /><br />
+				
+			  <ul>
+				<h6>O bien, si se precisa como interno:</h6>
+				<input type="checkbox" name="interno" id="interno">Interno<br />
+			  </ul><hr /><ul>
+				<input type="checkbox" name="lunes" id="lunes">Lunes<br />
+				<input type="checkbox" name="martes" id="martes">Martes<br />
+				<input type="checkbox" name="miercoles" id="miercoles">Miércoles<br />
+				<input type="checkbox" name="jueves" id="jueves">Jueves<br />
+				<input type="checkbox" name="viernes" id="viernes">viernes<br /><br />
+			  </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+              <div class="img">
+                <img src="/static/blog/images/about-plan.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Fin de Semana</a></h2>
+				<input type="text" class="form-control" placeholder="Horas" id="num2" name="num2" /><br />
+			  <ul>
+				<h6>O bien, si se precisa como interno:</h6>
+				<input type="checkbox" name="interno2" id="interno2">Interno<br />
+			  </ul><hr /><ul>
+				<input type="checkbox" name="Sabado" id="sabado">Sábado<br />
+				<input type="checkbox" name="Domingo" id="domingo">Domingo<br /><br />
+			  </ul>
+			  </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="/static/blog/images/about-vision.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Coste semanal</a></h2>
+				<ul>
+				<input type="button" class="button" value="Calcular" onclick="calc()" />
+				<h2><p id="result" name="r1"></p>Euros</h2>
+				
+				<br /><br />
+				</ul>
+            </div>
+          </div>
+
+        </div>
+		
+	
     </section>
 
     <!--==========================
@@ -599,7 +662,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Manos para Ayudar</h3>
+            <h3>Manos para Respirar</h3>
             <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
           </div>
 
@@ -647,7 +710,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Manos para Ayudar</strong>. All Rights Reserved
+        &copy; Copyright <strong>Manos para Respirar</strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- #footer -->
@@ -673,7 +736,60 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
-  
+  <script>
+function calc() {
+        /* finds out whether the browser uses textContent (Webkit, Opera, Mozilla...)
+           or innerText (Microsoft) to set the text of an element/node */
+    var textType = Node.textContent ? 'textContent' : 'innerText',
+        /* uses parseFloat to create numbers (where possible) from the entered value
+           if parseFloat fails to find a number (it's empty or nonsensical)
+           then a 0 is used instead (to prevent NaN being the output). */
+        num1 = parseFloat(document.getElementById('num1').value) || 0,
+        num2 = parseFloat(document.getElementById('num2').value) || 0,
+
+        // retrieves the result element
+        result = document.getElementById('result');
+
+		var lunes = 0;
+		var martes = 0;
+		var miercoles = 0;
+		var jueves = 0;
+		var viernes = 0;
+		var sabado = 0;
+		var domingo = 0;
+		
+		if( document.getElementById('lunes').checked ) {
+			lunes = 8;
+		}
+        if( document.getElementById('martes').checked ) {
+			martes = 8;
+		}
+		if( document.getElementById('miercoles').checked ) {
+			miercoles = 8;
+		}
+        if( document.getElementById('jueves').checked ) {
+			jueves = 8;
+		}
+		if( document.getElementById('viernes').checked ) {
+			viernes = 8;
+		}
+        if( document.getElementById('sabado').checked ) {
+			sabado = 10;
+		}
+        if( document.getElementById('domingo').checked ) {
+			domingo = 10;
+		}
+		if( document.getElementById('interno').checked ) {
+			num1 = 8;
+		}
+		if( document.getElementById('interno2').checked ) {
+			num2 = 8;
+		}
+        result[textType] = num1*lunes+num1*martes+num1*miercoles+num1*jueves+num1*viernes + num2*sabado+num2*domingo;
+         
+    
+}
+</script>
 
 </body>
 </html>
