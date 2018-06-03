@@ -9,7 +9,7 @@
 --------------------------------------------------------------*/
 body {
   background: #fff;
-  color: #666666;
+  color: #06272E;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo h1 {
-  font-size: 34px;
+  font-size: 30px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -738,8 +738,54 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 0;
 }
 
-/* Call To Action Section
+/* metodologia Section
 --------------------------------*/
+#call-to-action {
+  background: #fff;
+  background-size: cover;
+  padding: 60px 0 40px 0;
+}
+
+#call-to-action .box {
+  margin-bottom: 30px;
+}
+
+#call-to-action .icon {
+  float: left;
+}
+
+#call-to-action .icon i {
+  color: #18d26e;
+  font-size: 36px;
+  line-height: 1;
+  transition: 0.5s;
+}
+
+#call-to-action .title {
+  margin-left: 60px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#call-to-action .title a {
+  color: #111;
+}
+
+#call-to-action .box:hover .title a {
+  color: #18d26e;
+}
+
+#call-to-action .description {
+  font-size: 14px;
+  margin-left: 60px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+
+/* Call To Action Section
+--------------------------------
 #call-to-action {
   background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
@@ -776,7 +822,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 2px solid #18d26e;
 }
 
-/* Call To Action Section
+ Call To Action Section
 --------------------------------*/
 #skills {
   background: url("../img/about-bg.jpg") center top no-repeat fixed;
