@@ -26,4 +26,9 @@ class LoginForm(forms.ModelForm):
     class Meta:
        model = Usuario
        fields = ('email', 'password',)	
-	   
+
+class ContactForm(forms.Form):
+    subject = forms.CharField(max_length=100)
+    name = forms.CharField(max_length=100, required=False)
+    email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea)

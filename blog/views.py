@@ -3,55 +3,36 @@ from django.shortcuts import redirect
 from django.utils import timezone
 from django.contrib.auth import login, authenticate
 from django.core.mail import send_mail
-from .models import Post
+
 from .models import Usuario
 from .forms import UsuarioForm
 from .forms import LoginForm
-
-# Create your views here.
-def post_list(request):
-    print("Esto va")
-    if request.method == 'POST': 
-       form = LoginForm(request.POST)
-       if form.is_valid():
-          email = form.cleaned_data['email']
-          print(email)
-          password = form.cleaned_data['password']
-          user = authenticate(email=email, password=password)
-       #user = Usuario.objects.get(email = email)
-          if user is not None:
-            print("Esto va")
-            login(request, user)
-          else:
-            print("Usario no reconocido")
-            form = LoginForm()		 
-    else:
-       form = LoginForm()
-			
-    return render(request, 'blog/indexmanos.html', {'form': form})
+from .forms import ContactForm
+ 
+def thanks(request):
+    return render(request, 'vision.html')
 	
-def mision(request):
-    return render(request, 'blog/mision.html', {})
-def vision(request):
-    return render(request, 'blog/vision.html', {})
-def index(request):
-    return render(request, 'blog/index.html', {})
+# Create your views here.
+
 def indexmanos(request):
-    if request.method == "POST":
-        
-        #usuario = request.POST.__getitem__(name)	 
-        #print(usuario)
-        print("BENNE")
-        # send_mail(
-        # 'Subject here',
-        # 'Here is the message.',
-        # 'from@example.com',
-        # ['alpachemi@gmail.com'],
-        # fail_silently=False,
-        # )
+    if request.method == 'POST':
+
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            send_mail(
+                data['subject'],
+                'El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'],
+                data['email'], #FROM
+                ['alpachemi@gmail.com'],
+                fail_silently=False,
+            )
+      
+            print(data['email'])
+            return render(request, 'blog/vision.html', {})
+    else:
         return render(request, 'blog/indexmanos.html', {})
-			
-    return render(request, 'blog/indexmanos.html', {})
+ 
 	
 def registro(request):
     if request.method == "POST":
@@ -88,5 +69,3 @@ def registro(request):
         form = UsuarioForm()
     return render(request, 'blog/registro.html', {'form': form})
 	
-#def indexlog(request):
-#    return render(request, 'blog/vision.html', {})

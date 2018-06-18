@@ -39,9 +39,9 @@
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">Manos para Respirar</a></h1>
+        <!-- <h1><a href="#intro" class="scrollto">Manos para Respirar</a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-         <!--<a href="#intro"><img src="/static/blog/images/logo_blanco.png" alt="" title="Manos para Respira" /></a>-->
+         <a href="#intro"><img src="/static/blog/images/letra_blanco_opt.png" alt="" title="Manos para Respirar" /></a>
       </div>
 
       <nav id="nav-menu-container">
@@ -51,7 +51,6 @@
           <li><a href="#call-to-action">Metodología</a></li>
           <li><a href="#skills">Tarifas</a></li>
 		  <li><a href="#about">Conócenos</a></li>
-          <li><a href="#team">Equipo</a></li>
           <li><a href="#contact">Contacta</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -129,7 +128,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
         <div class="row">
 
           <div class="col-lg-4 box">
-            <i class="ion-ios-bookmarks-outline"></i>
+            <i class="fas fa-phone"></i>
             <h4 class="title"><a href="#contact">Cuéntanos tus necesidades</a></h4>
             <p class="description"><a href="#contact">Contacta</a> con nosotros o te llamamos</p>
           </div>
@@ -255,7 +254,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
             <p class="description">Evaluación sistematizada y control de calidad.</p>
           </div>
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-			<div class="icon"><i class="fas fa-home-heart"></i></div>
+			<div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
 			<h4 class="title">Involucración</h4>
             <p class="description">Involucración de la familia en todo el proceso</p>
 		  </div>
@@ -289,13 +288,20 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
 				
 			  <ul>
 				<h6>O bien, si se precisa como interno:</h6>
-				<input type="checkbox" name="interno" id="interno">Interno<br />
-			  </ul><hr /><ul>
-				<input type="checkbox" name="lunes" id="lunes">Lunes<br />
-				<input type="checkbox" name="martes" id="martes">Martes<br />
-				<input type="checkbox" name="miercoles" id="miercoles">Miércoles<br />
-				<input type="checkbox" name="jueves" id="jueves">Jueves<br />
-				<input type="checkbox" name="viernes" id="viernes">viernes<br /><br />
+				<input type="checkbox" name="interno" id="interno" class="css-checkbox">
+				<label for="interno" class="css-label">Interno</label><br />
+				</ul><hr /><ul>
+				<h6>Indique los días:</h6>
+				<input type="checkbox" name="lunes" id="lunes" class="css-checkbox">
+				<label for="lunes" class="css-label">Lunes</label><br />
+				<input type="checkbox" name="martes" id="martes" class="css-checkbox">
+				<label for="martes" class="css-label">Martes</label><br />
+				<input type="checkbox" name="miercoles" id="miercoles" class="css-checkbox">
+				<label for="miercoles" class="css-label">Miércoles</label><br />
+				<input type="checkbox" name="jueves" id="jueves" class="css-checkbox">
+				<label for="jueves" class="css-label">Jueves</label><br />
+				<input type="checkbox" name="viernes" id="viernes" class="css-checkbox">
+				<label for="viernes" class="css-label">viernes</label><br /><br />
 			  </ul>
             </div>
           </div>
@@ -310,10 +316,14 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
 				<input type="text" class="form-control" placeholder="Horas" id="num2" name="num2" /><br />
 			  <ul>
 				<h6>O bien, si se precisa como interno:</h6>
-				<input type="checkbox" name="interno2" id="interno2">Interno<br />
+				<input type="checkbox" name="interno2" id="interno2" class="css-checkbox">
+				<label for="interno2" class="css-label">Interno</label><br />
 			  </ul><hr /><ul>
-				<input type="checkbox" name="Sabado" id="sabado">Sábado<br />
-				<input type="checkbox" name="Domingo" id="domingo">Domingo<br /><br />
+				<h6>Indique los días:</h6>
+				<input type="checkbox" name="Sabado" id="sabado" class="css-checkbox">
+				<label for="sabado" class="css-label">Sábado</label><br />
+				<input type="checkbox" name="Domingo" id="domingo" class="css-checkbox">
+				<label for="domingo" class="css-label">Domingo</label><br /><br />
 			  </ul>
 			  </div>
           </div>
@@ -327,7 +337,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
               <h2 class="title"><a href="#">Coste</a></h2>
 				<ul>
 				<input type="button" class="button" value="Calcular" onclick="calc()" />
-				<h2><p id="result" name="r1"></p>Euros</h2>
+				<h2><p id="result" name="r1" style="font-size:20px"></p>Euros/Mes</h2>
 				
 				<br /><br />
 				</ul>
@@ -468,57 +478,35 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
         <div class="owl-carousel testimonials-carousel">
 
           <div class="testimonial-item">
-            <img src="/static/blog/images/testimonial-1.jpg" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
+            <img src="/static/blog/images/jr.jpg" class="testimonial-img" alt="">
+            <h3>Jose Ramón Riera</h3>
+            <h4>Co-Fundador</h4>
             <p>
               <img src="/static/blog/images/quote-sign-left.png" class="quote-sign-left" alt="">
-              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+              Nuestra vocación es cuidar a todo el mundo, trabajamos para hacer esto posible
               <img src="/static/blog/images/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
           </div>
 
           <div class="testimonial-item">
             <img src="/static/blog/images/testimonial-2.jpg" class="testimonial-img" alt="">
-            <h3>Sara Wilsson</h3>
-            <h4>Designer</h4>
+            <h3>Dolores Borrego</h3>
+            <h4>Clienta</h4>
             <p>
               <img src="/static/blog/images/quote-sign-left.png" class="quote-sign-left" alt="">
-              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+              Una de las mejores decisiones de mi vida, ahora vivimos más tranquilos
+			  <img src="/static/blog/images/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
           </div>
 
           <div class="testimonial-item">
-            <img src="/static/blog/images/testimonial-3.jpg" class="testimonial-img" alt="">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
+            <img src="/static/blog/images/alex.jpg" class="testimonial-img" alt="">
+            <h3>Alejandro Torrado</h3>
+            <h4>Co-Fundador</h4>
             <p>
               <img src="/static/blog/images/quote-sign-left.png" class="quote-sign-left" alt="">
-              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-              <img src="/static/blog/images/quote-sign-right.png" class="quote-sign-right" alt="">
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="/static/blog/images/testimonial-4.jpg" class="testimonial-img" alt="">
-            <h3>Matt Brandon</h3>
-            <h4>Freelancer</h4>
-            <p>
-              <img src="/static/blog/images/quote-sign-left.png" class="quote-sign-left" alt="">
-              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-              <img src="/static/blog/images/quote-sign-right.png" class="quote-sign-right" alt="">
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="/static/blog/images/testimonial-5.jpg" class="testimonial-img" alt="">
-            <h3>John Larson</h3>
-            <h4>Entrepreneur</h4>
-            <p>
-              <img src="/static/blog/images/quote-sign-left.png" class="quote-sign-left" alt="">
-              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              <img src="/static/blog/images/quote-sign-right.png" class="quote-sign-right" alt="">
+              Intentamos mejorar día a día acercándonos a los que más importan
+			  <img src="/static/blog/images/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
           </div>
 
@@ -718,12 +706,12 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
               <strong>Email:</strong> info@manospararespirar.com<br>
             </p>
 
-            <div class="social-links">
+           <!-- <div class="social-links">
               <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
               <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
               <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <!--<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>-->
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
 
           </div>
@@ -747,7 +735,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
     </div>
   </footer><!-- #footer -->
 
-  <a href="#contact" class="back-to-top"><i class="fa fa-envelope-o"></i></a>
+  <a href="#contact" class="back-to-top"><i class="fa fa-envelope"></i></a>
 
   <!-- JavaScript Libraries -->
   <script src="{% static 'lib/jquery/jquery.min.js' %}" type="text/javascript"></script>
@@ -817,7 +805,7 @@ function calc() {
 		if( document.getElementById('interno2').checked ) {
 			num2 = 8;
 		}
-        result[textType] = num1*lunes+num1*martes+num1*miercoles+num1*jueves+num1*viernes + num2*sabado+num2*domingo;
+        result[textType] = (num1*lunes+num1*martes+num1*miercoles+num1*jueves+num1*viernes + num2*sabado+num2*domingo) * 4 + 50;
          
     
 }
