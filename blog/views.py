@@ -10,7 +10,7 @@ from .forms import LoginForm
 from .forms import ContactForm
  
 def thanks(request):
-    return render(request, 'vision.html')
+    return render(request, 'blog/mensaje.html')
 	
 # Create your views here.
 
@@ -29,7 +29,7 @@ def indexmanos(request):
             )
       
             print(data['email'])
-            return render(request, 'blog/vision.html', {})
+            return render(request, 'blog/mensaje.html', {})
     else:
         return render(request, 'blog/indexmanos.html', {})
  
