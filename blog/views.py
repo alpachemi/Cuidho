@@ -9,10 +9,14 @@ from .forms import UsuarioForm
 from .forms import LoginForm
 from .forms import ContactForm
  
+	
+# Create your views here.
+
 def thanks(request):
     return render(request, 'blog/mensaje.html')
 	
-# Create your views here.
+def indexeng(request):
+    return render(request, 'blog/indexmanos_eng.html')
 
 def indexmanos(request):
     if request.method == 'POST':
