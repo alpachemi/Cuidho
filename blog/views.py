@@ -4,20 +4,46 @@ from django.utils import timezone
 from django.contrib.auth import login, authenticate
 from django.core.mail import send_mail
 
+from .models import Document
 from .models import Usuario
 from .forms import UsuarioForm
 from .forms import LoginForm
 from .forms import ContactForm
+from .forms import WorkForm
  
 	
 # Create your views here.
 
 def thanks(request):
     return render(request, 'blog/mensaje.html')
-	
+
+def trabaja(request):
+    if request.method == 'POST':
+
+        form = WorkForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+			
+            msg = EmailMessage(data['subject'],'El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'], to=["alpachemi@gmail.com"], fail_silently=False)
+            newdoc = Document(docfile = request.FILES['myfile'])
+            newdoc.save()
+            #myfile = request.FILES['myfile']
+            #handle_uploaded_file(request.FILES['file'])
+            msg.attach('curriculum.pdf', newdoc, 'application/pdf')
+            msg.content_subtype = "html"
+            msg.send()
+      
+            print(data['email'])
+            return render(request, 'blog/mensaje.html', {})
+    else:
+        return render(request, 'blog/trabaja.html', {})
+
 def indexeng(request):
     return render(request, 'blog/indexmanos_eng.html')
 
+def indexfr(request):
+    return render(request, 'blog/indexmanos_fr.html')
+	
 def indexmanos(request):
     if request.method == 'POST':
 
@@ -72,4 +98,9 @@ def registro(request):
     else:
         form = UsuarioForm()
     return render(request, 'blog/registro.html', {'form': form})
+	
+def handle_uploaded_file(f):
+    with open('some/file/name.pdf', 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)
 	

@@ -6,4 +6,6 @@ urlpatterns = [
         url(r'^$', views.indexmanos),
 		url(r'^thanks/$', views.thanks),
         url(r'^indexeng/$', views.indexeng),
+        url(r'^indexfr/$', views.indexfr),
+        url(r'^trabaja/$', views.trabaja),
 ]
