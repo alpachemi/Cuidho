@@ -37,5 +37,6 @@ class WorkForm(forms.Form):
     subject = forms.CharField(max_length=100)
     name = forms.CharField(max_length=100, required=False)
     email = forms.EmailField()
+    phone = forms.CharField(max_length=15)
     message = forms.CharField(widget=forms.Textarea)
     file = forms.FileField()

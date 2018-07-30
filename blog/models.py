@@ -36,5 +36,15 @@ class Usuario(models.Model):
     def publish(self):
         self.save()
 		
-class Document(models.Model):
-    docfile = models.FileField(upload_to='documents/%Y/%m/%d')
+#class Document(models.Model):
+#    docfile = models.FileField(upload_to='documents/%Y/%m/%d')
+	
+class Worker(models.Model):
+    subject = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.CharField(max_length=500)
+    file = models.FileField()
+	
+    def __str__(self):
+        return str(self.id)

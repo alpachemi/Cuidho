@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.contrib.auth import login, authenticate
 from django.core.mail import send_mail
 
-from .models import Document
+from .models import Worker
 from .models import Usuario
 from .forms import UsuarioForm
 from .forms import LoginForm
@@ -20,23 +20,26 @@ def thanks(request):
 def trabaja(request):
     if request.method == 'POST':
 
-        form = WorkForm(request.POST)
+        form = WorkForm(request.POST, request.FILES)
         if form.is_valid():
             data = form.cleaned_data
+            worker = form.save(commit=False)
+          #   worker.subject = data['subject']
+          #   worker.name = data['name']
+          #   worker.email = data['email']
+            worker.save()
 			
-            msg = EmailMessage(data['subject'],'El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'], to=["alpachemi@gmail.com"], fail_silently=False)
-            newdoc = Document(docfile = request.FILES['myfile'])
-            newdoc.save()
-            #myfile = request.FILES['myfile']
-            #handle_uploaded_file(request.FILES['file'])
+			
+            msg = EmailMessage(data['subject'],'El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'], to=["alpachemi@gmail.com"], fail_silently=False)
             msg.attach('curriculum.pdf', newdoc, 'application/pdf')
             msg.content_subtype = "html"
             msg.send()
       
-            print(data['email'])
+            print(data['email'])		
             return render(request, 'blog/mensaje.html', {})
     else:
-        return render(request, 'blog/trabaja.html', {})
+        form = WorkForm()
+        return render(request, 'blog/trabaja.html', {'form': form})
 
 def indexeng(request):
     return render(request, 'blog/indexmanos_eng.html')
@@ -98,9 +101,3 @@ def registro(request):
     else:
         form = UsuarioForm()
     return render(request, 'blog/registro.html', {'form': form})
-	
-def handle_uploaded_file(f):
-    with open('some/file/name.pdf', 'wb+') as destination:
-        for chunk in f.chunks():
-            destination.write(chunk)
-	
