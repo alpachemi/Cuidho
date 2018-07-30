@@ -25,7 +25,7 @@ SECRET_KEY = '_*yom*1$*9saocx!7q0a(6h_p-@fn-#$a!s1+bvx*davs$01pj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['alpachemi.pythonanywhere.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['alpachemi.pythonanywhere.com', 'localhost', '127.0.0.1', 'manospararespirar.com']
 
 
 # Application definition
