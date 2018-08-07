@@ -661,10 +661,16 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
                 <div class="validation"></div>
               </div>
             </div>
-            <div class="form-group">
+			<div class="form-row">
+            <div class="form-group col-md-6">
               <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
               <div class="validation"></div>
             </div>
+			<div class="form-group col-md-6">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Teléfono" data-rule="required" data-msg="Please enter at least 9 chars of subject" />
+              <div class="validation"></div>
+            </div>
+			</div>
             <div class="form-group">
               <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Cuéntanos qué te interesa"></textarea>
               <div class="validation"></div>

@@ -3,6 +3,8 @@ from django.shortcuts import redirect
 from django.utils import timezone
 from django.contrib.auth import login, authenticate
 from django.core.mail import send_mail
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
 
 from .models import Worker
 from .models import Usuario
@@ -20,23 +22,49 @@ def thanks(request):
 def trabaja(request):
     if request.method == 'POST':
 
-        form = WorkForm(request.POST, request.FILES)
-        if form.is_valid():
+        form = WorkForm(request.POST)
+        if form.is_valid() and ('filepath' in request.FILES):
             data = form.cleaned_data
-            worker = form.save(commit=False)
+            #worker = form.save(commit=False)
           #   worker.subject = data['subject']
           #   worker.name = data['name']
           #   worker.email = data['email']
-            worker.save()
+           # worker.save()
 			
-			
-            msg = EmailMessage(data['subject'],'El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'], to=["alpachemi@gmail.com"], fail_silently=False)
-            msg.attach('curriculum.pdf', newdoc, 'application/pdf')
-            msg.content_subtype = "html"
-            msg.send()
+           #  msg = EmailMessage(data['subject'],'El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'], to=["alpachemi@gmail.com"], fail_silently=False)
+            myfile = request.FILES['myfile']
+            fs = FileSystemStorage()
+            filename = fs.save(myfile.name, myfile)
+            uploaded_file_url = fs.url(filename)
+            print(uploaded_file_url)
+            send_mail(
+                'Bolsa de trabajo','Asunto: '+ data['subject'] + 
+                ' El Trabajador: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
+                data['email'], #FROM
+                ['alpachemi@gmail.com'],
+                fail_silently=False,
+            )
+      
       
             print(data['email'])		
             return render(request, 'blog/mensaje.html', {})
+        else:
+            if form.is_valid():
+                data = form.cleaned_data
+                send_mail(
+                'Bolsa de trabajo','Asunto: '+ data['subject'] + 
+                ' El Trabajador: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
+                data['email'], #FROM
+                ['alpachemi@gmail.com'],
+                fail_silently=False,
+                 )
+                print(data['email'])		
+                return render(request, 'blog/mensaje.html', {})
+ 
+            else:
+                print('ERROR')
+                return render(request, 'blog/mensaje.html', {})
+ 
     else:
         form = WorkForm()
         return render(request, 'blog/trabaja.html', {'form': form})
@@ -54,8 +82,8 @@ def indexmanos(request):
         if form.is_valid():
             data = form.cleaned_data
             send_mail(
-                data['subject'],
-                'El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'],
+                'Cliente','Asunto: '+ data['subject'] + 
+                ' El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
                 data['email'], #FROM
                 ['alpachemi@gmail.com'],
                 fail_silently=False,
