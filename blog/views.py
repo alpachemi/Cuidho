@@ -41,7 +41,7 @@ def trabaja(request):
                 'Bolsa de trabajo','Asunto: '+ data['subject'] + 
                 ' El Trabajador: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
                 data['email'], #FROM
-                ['alpachemi@gmail.com'],
+                ['info@manospararespirar.com'],
                 fail_silently=False,
             )
       
@@ -55,7 +55,7 @@ def trabaja(request):
                 'Bolsa de trabajo','Asunto: '+ data['subject'] + 
                 ' El Trabajador: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
                 data['email'], #FROM
-                ['alpachemi@gmail.com'],
+                ['info@manospararespirar.com'],
                 fail_silently=False,
                  )
                 print(data['email'])		
