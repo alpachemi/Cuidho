@@ -70,10 +70,43 @@ def trabaja(request):
         return render(request, 'blog/trabaja.html', {'form': form})
 
 def indexeng(request):
-    return render(request, 'blog/indexmanos_eng.html')
+    if request.method == 'POST':
 
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            send_mail(
+                'Cliente','Asunto: '+ data['subject'] + 
+                ' El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
+                data['email'], #FROM
+                ['info@manospararespirar.com'],
+                fail_silently=False,
+            )
+      
+            print(data['email'])
+            return render(request, 'blog/mensaje.html', {})
+    else:
+        return render(request, 'blog/indexmanos_eng.html', {})
+ 
 def indexfr(request):
-    return render(request, 'blog/indexmanos_fr.html')
+    if request.method == 'POST':
+
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            send_mail(
+                'Cliente','Asunto: '+ data['subject'] + 
+                ' El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
+                data['email'], #FROM
+                ['info@manospararespirar.com'],
+                fail_silently=False,
+            )
+      
+            print(data['email'])
+            return render(request, 'blog/mensaje.html', {})
+    else:
+        return render(request, 'blog/indexmanos_fr.html', {})
+ 
 	
 def indexmanos(request):
     if request.method == 'POST':
@@ -85,7 +118,7 @@ def indexmanos(request):
                 'Cliente','Asunto: '+ data['subject'] + 
                 ' El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
                 data['email'], #FROM
-                ['alpachemi@gmail.com'],
+                ['info@manospararespirar.com'],
                 fail_silently=False,
             )
       
