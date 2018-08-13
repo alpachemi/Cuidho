@@ -45,7 +45,6 @@ def trabaja(request):
                 fail_silently=False,
             )
       
-      
             print(data['email'])		
             return render(request, 'blog/mensaje.html', {})
         else:
