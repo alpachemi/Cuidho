@@ -23,7 +23,8 @@ def trabaja(request):
     if request.method == 'POST':
 
         form = WorkForm(request.POST)
-        if form.is_valid() and ('filepath' in request.FILES):
+        if form.is_valid() and ('myfile' in request.FILES):
+            print('Con adjunto')
             data = form.cleaned_data
             #worker = form.save(commit=False)
           #   worker.subject = data['subject']
@@ -38,8 +39,13 @@ def trabaja(request):
             uploaded_file_url = fs.url(filename)
             print(uploaded_file_url)
             send_mail(
-                'Bolsa de trabajo','Asunto: '+ data['subject'] + 
-                ' El Trabajador: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
+                'Bolsa de trabajo', 
+                ' El Trabajador: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'] 
+                + ' dni: ' + data['dni'] + ' lugar de residencia: ' + data['ciudad'] + ' edad: ' + data['edad'] + ' nacionalidad: ' + data['nacionalidad']
+                + ' formacion general: ' + data['formacion']  + ' formacion específica: ' + data['especifica'] + ' cuidados: ' + data['cuidados'] + ' remunerados: ' + data['remunerados'] + ' duracion: ' + data['duracion']
+                + ' dependencia: ' + data['dependencia'] + ' parcial: ' + data['parcial'] + ' acompanamiento: ' + data['acompanamiento'] + ' interno: ' + data['interno']
+                + ' media_jornada: ' + data['media_jornada'] + ' entre_semana: ' + data['entre_semana'] + ' fines_semana: ' + data['fines_semana'] + ' vehiculo: ' + data['vehiculo']
+                + ' desplazamiento: ' + data['desplazamiento'] + ' solo_localidad: ' + data['solo_localidad'] + ' provincia: ' + data['provincia'],
                 data['email'], #FROM
                 ['info@manospararespirar.com'],
                 fail_silently=False,
@@ -49,10 +55,16 @@ def trabaja(request):
             return render(request, 'blog/mensaje.html', {})
         else:
             if form.is_valid():
+                print('Sin adjunto')
                 data = form.cleaned_data
                 send_mail(
-                'Bolsa de trabajo','Asunto: '+ data['subject'] + 
-                ' El Trabajador: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
+                'Bolsa de trabajo',
+			    ' El Trabajador: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'] 
+                + ' dni: ' + data['dni'] + ' lugar de residencia: ' + data['ciudad'] + ' edad: ' + data['edad'] + ' nacionalidad: ' + data['nacionalidad']
+                + ' formacion general: ' + data['formacion']  + ' formacion específica: ' + data['especifica'] + ' cuidados: ' + data['cuidados'] + ' remunerados: ' + data['remunerados'] + ' duracion: ' + data['duracion']
+                + ' dependencia: ' + data['dependencia'] + ' parcial: ' + data['parcial'] + ' acompanamiento: ' + data['acompanamiento'] + ' interno: ' + data['interno']
+                + ' media_jornada: ' + data['media_jornada'] + ' entre_semana: ' + data['entre_semana'] + ' fines_semana: ' + data['fines_semana'] + ' vehiculo: ' + data['vehiculo']
+                + ' desplazamiento: ' + data['desplazamiento'] + ' solo_localidad: ' + data['solo_localidad'] + ' provincia: ' + data['provincia'],
                 data['email'], #FROM
                 ['info@manospararespirar.com'],
                 fail_silently=False,

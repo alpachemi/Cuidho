@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Manos para Respirar</title>
+  <title>Manos para Respirar - Cuidados en domicilio</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-
+  <meta content="Cuidados, domicilio, anciano, casa, mayor" name="keywords">
+  <meta content="Cuidados en domicilio que abarcan todas las necesidades. Ofrecemos cuidados personalizados con personal cualificado al mejor precio" name="description">
   <!-- Favicons -->
   <link href="/static/blog/images/logo_opt.png" rel="icon">
   <link href="/static/blog/images/logo_opt.png" rel="apple-touch-icon">
-
+  <link rel="canonical" href="https://www.manospararespirar.com/"/>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
   <!-- Bootstrap CSS File -->
   <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
@@ -27,6 +26,16 @@
   <link href="{% static 'lib/fontawesome-free/web-fonts-with-css/css/fontawesome-all.css' %}" rel="stylesheet">
   <!-- Main Stylesheet File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123920765-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123920765-1');
+</script>
 
 </head>
 
@@ -41,10 +50,10 @@
       <div id="logo" class="pull-left">
         <!-- <h1><a href="#intro" class="scrollto">Manos para Respirar</a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-         <a href="#intro"><img src="/static/blog/images/letra_blanco_opt.png" alt="" title="Manos para Respirar" /></a>
+         <a href="#intro"><img src="/static/blog/images/letra_blanco_opt.png" alt="Logo, cuidados a domicilio" title="Manos para Respirar" /></a>
       </div>
 
-      <nav id="nav-menu-container"> 
+      <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="#services">Servicios</a></li>
           <li><a href="#call-to-action">Metodología</a></li>
@@ -52,9 +61,9 @@
 		  <li><a href="#about">Conócenos</a></li>
           <li><a href="#contact">Contacta</a></li>
           <li><a href="/trabaja">Trabaja con nosotros</a></li>
-          <li><a href="/indexeng"><img src="/static/blog/images/gb.png"/></a></li>
-          <li><a href="/indexfr"><img src="/static/blog/images/fr.png"/></a></li>
-		  
+          <li><a href="/indexeng"><img src="/static/blog/images/gb.png" alt="English"/></a></li>
+          <li><a href="/indexfr"><img src="/static/blog/images/fr.png"  alt="French"/></a></li>
+
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -72,7 +81,7 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="carousel-item active">
-            <div class="carousel-background"><img src="/static/blog/images/intro-carousel/adults.jpg" alt=""></div>
+            <div class="carousel-background"><img src="/static/blog/images/intro-carousel/adults.jpg" alt="Inicio, domicilio"></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Cuidamos de los tuyos</h2>
@@ -83,19 +92,19 @@
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="/static/blog/images/intro-carousel/abuelos.jpg" alt=""></div>
+            <div class="carousel-background"><img src="/static/blog/images/intro-carousel/abuelos.jpg" alt="Inicio, cuidados"></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>¿Qué podemos hacer por ti?</h2>
-                <p>Escuchar tus necesidades y aportar  soluciones. Siguiendo siempre una estrategia basada en una atención integral, con el objetivo de facilitar tu día a día, en tu vida como cuidadora.</br>
-Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</p>
+                <p>Escuchar tus necesidades y aportar  soluciones. Siguiendo siempre una estrategia basada en una atención integral, con el objetivo de facilitar tu día a día, en tu vida como cuidadora.
+                Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Servicios</a>
               </div>
             </div>
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="/static/blog/images/intro-carousel/hand.jpg" alt=""></div>
+            <div class="carousel-background"><img src="/static/blog/images/intro-carousel/hand.jpg" alt="Inicio, ancianos"></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>Nuestra Metodología</h2>
@@ -135,13 +144,13 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
             <h4 class="title"><a href="#contact">Cuéntanos tus necesidades</a></h4>
             <p class="description"><a href="#contact">Contacta</a> con nosotros o te llamamos</p>
           </div>
-		  
+
           <div class="col-lg-4 box box-bg">
             <i class="ion-ios-heart-outline"></i>
             <h4 class="title"><a href="#services">Cuidaremos de los que más te importan</a></h4>
             <p class="description">Nuestros cuidados arropan a quién más quieres</p>
           </div>
-		  
+
           <div class="col-lg-4 box">
             <i class="ion-ios-stopwatch-outline"></i>
             <h4 class="title"><a href="">Estamos listos para ayudaros</a></h4>
@@ -192,10 +201,10 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
             <p class="description">Mantener un ambiente limpio y seguro</p>
           </div>
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-people"></i></div>            
+            <div class="icon"><i class="ion-ios-people"></i></div>
             <h4 class="title">Acompañamiento</h4>
             <p class="description">Nos preocupa el bienestar físico y mental buscando el máximo nivel de autonomía</p>
-		
+
           </div>
 
         </div>
@@ -204,7 +213,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
     </section><!-- #services -->
 
     <!--==========================
-     
+
     <section id="call-to-action" class="wow fadeIn">
       <div class="container text-center">
         <h3>Call To Action</h3>
@@ -214,9 +223,9 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
     </section>
 	Call To Action Section
     ============================-->
-	
-	
-	
+
+
+
 
     <!--==========================
       Metodologia Section
@@ -276,7 +285,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
           <h3>Nuestras Tarifas</h3>
           <p>Indique el servicio que quiere disfrutar</p>
         </header>
-		
+
 		<div class="row about-cols">
 
           <div class="col-md-4 wow fadeInUp">
@@ -286,9 +295,9 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
                 <div class="icon"><i class="fas fa-calendar-alt"></i></div>
               </div>
               <h2 class="title"><a href="#">Entre semana</a></h2>
-			  
+
 				<input type="text" class="form-control" placeholder="Horas" id="num1" name="num1" /><br />
-				
+
 			  <ul>
 				<h6>O bien, si se precisa como interno:</h6>
 				<input type="checkbox" name="interno" id="interno" class="css-checkbox">
@@ -341,18 +350,18 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
 				<ul>
 				<input type="button" class="button" value="Calcular" onclick="calc()" />
 				<h2><p id="result" name="r1" style="font-size:20px"></p>Euros/Mes</h2>
-				
+
 				<br /><br />
 				</ul>
             </div>
           </div>
 
         </div>
-		
-	
+
+
     </section>
 
-    <!--==========================
+    ==========================
       About Us Section
     ============================-->
     <section id="about">
@@ -368,7 +377,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
           <div class="col-md-4 wow fadeInUp">
             <div class="about-col">
               <div class="img">
-                <img src="/static/blog/images/mision.jpg" alt="" class="img-fluid">
+                <img src="/static/blog/images/mision.jpg" alt="Mision, cuidados a domicilio" class="img-fluid">
                 <div class="icon"><i class="fas fa-flag"></i></div>
               </div>
               <h2 class="title"><a href="#">Nuestra Misión</a></h2>
@@ -381,7 +390,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="about-col">
               <div class="img">
-                <img src="/static/blog/images/vision.jpg" alt="" class="img-fluid">
+                <img src="/static/blog/images/vision.jpg" alt="Vision, cuidados a domicilio" class="img-fluid">
                 <div class="icon"><i class="ion-ios-eye"></i></div>
               </div>
               <h2 class="title"><a href="#">Nuestra Visión</a></h2>
@@ -392,14 +401,14 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
             <div class="about-col">
               <div class="img">
-                <img src="/static/blog/images/valores.jpg" alt="" class="img-fluid">
+                <img src="/static/blog/images/valores.jpg" alt="Valores, cuidados a domicilio" class="img-fluid">
                 <div class="icon"><i class="fas fa-hands-helping"></i></div>
               </div>
               <h2 class="title"><a href="#">Nuestros Valores</a></h2>
 				<ul>
-					<li type="circle"><p>Liderazgo: enfermeras al frente de una atención integrada para ofrecer una atención de calidad.</p></li>
-					<li type="circle"><p>Integridad: Nuestro mejor aval es nuestro trabajo y compromiso con el cuidado.</p></li>
-					<li type="circle"><p>Responsabilidad: Dando respuesta a las necesidades planteadas en base al compromiso adquirido.</p></li>
+					<li ><p>Liderazgo: enfermeras al frente de una atención integrada para ofrecer una atención de calidad.</p></li>
+					<li ><p>Integridad: Nuestro mejor aval es nuestro trabajo y compromiso con el cuidado.</p></li>
+					<li ><p>Responsabilidad: Dando respuesta a las necesidades planteadas en base al compromiso adquirido.</p></li>
 				</ul>
             </div>
           </div>
@@ -408,8 +417,8 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
 
       </div>
     </section><!-- #about -->
-	
-	
+
+
     <!--==========================
       Facts Section
     ============================
@@ -446,7 +455,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
   			</div>
 
       </div>
-    </section><!-- #facts -->
+    </section>--> <!--#facts -->
 
     <!--==========================
       Clients Section
@@ -466,7 +475,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
         </div>
 
       </div>
-    </section><!-- #clients -->
+    </section>--><!-- #clients -->
 
     <!--==========================
       Clients Section
@@ -503,7 +512,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
           </div>-->
 
           <div class="testimonial-item">
-            <img src="/static/blog/images/alex.jpg" class="testimonial-img" alt="">
+            <img src="/static/blog/images/alex.jpg" class="testimonial-img" alt="opinion, positiva">
             <h3>Alejandro Torrado</h3>
             <h4>Cofundador</h4>
             <p>
@@ -532,7 +541,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
 
           <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="/static/blog/images/jr.jpg" class="img-fluid" alt="">
+              <img src="/static/blog/images/jr.jpg" class="img-fluid" alt="founder, anciano">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Jose Ramón Riera</h4>
@@ -547,10 +556,10 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
               </div>
             </div>
           </div>
-		  
+
 		<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="/static/blog/images/loli.jpg" class="img-fluid" alt="">
+              <img src="/static/blog/images/loli.jpg" class="img-fluid" alt="founder, cuidados">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Dolores Saavedra</h4>
@@ -566,10 +575,10 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
               </div>
             </div>
           </div>
-		  
+
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="/static/blog/images/jorge.jpg" class="img-fluid" alt="">
+              <img src="/static/blog/images/jorge.jpg" class="img-fluid" alt="founder, domicilio">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Jorge López</h4>
@@ -587,7 +596,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="/static/blog/images/alex.jpg" class="img-fluid" alt="">
+              <img src="/static/blog/images/alex.jpg" class="img-fluid" alt="founder, hogar">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Alejandro Torrado</h4>
@@ -646,11 +655,11 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
           </div>
 
         </div>
-		
+
 		<div class="section-header">
 		  <p>¿Quieres <a href="/trabaja">trabajar</a> con nosotros?<a href="/trabaja"> Pinche aquí</a></p>
 		</div>
-		
+
         <div class="form">
           <div id="sendmessage">Your message has been sent. Thank you!</div>
           <div id="errormessage"></div>
@@ -698,7 +707,7 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
 
           <div class="col-lg-3 col-md-6 footer-info">
 			<!--<img src="/static/blog/images/logo_blanco_simple_opt.png" alt="" title="Manos para Respirar" />-->
-             <h3>Manos para Respirar</h3>
+             <h1>Manos para Respirar - Cuidados en domicilio</h1>
             <p>Somos un grupo de profesionales expertos en cuidados y en la formación de las personas que cuidan, sean familiares o profesionales.</p>
           </div>
 
@@ -730,7 +739,6 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
             </div>
 
           </div>
-<!--
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
@@ -739,10 +747,11 @@ Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</
             </form>
           </div>-->
 
+            </div>
         </div>
-      </div>
+        </div>
     </div>
-
+    </div>
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong>Manos para Respirar</strong>. All Rights Reserved
@@ -792,7 +801,7 @@ function calc() {
 		var viernes = 0;
 		var sabado = 0;
 		var domingo = 0;
-		
+
 		if( document.getElementById('lunes').checked ) {
 			lunes = 8;
 		}
@@ -821,8 +830,8 @@ function calc() {
 			num2 = 8;
 		}
         result[textType] = (num1*lunes+num1*martes+num1*miercoles+num1*jueves+num1*viernes + num2*sabado+num2*domingo) * 4 + 50;
-         
-    
+
+
 }
 </script>
 

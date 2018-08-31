@@ -113,7 +113,7 @@
             </div>
 			<div class="form-row">
             <div class="form-group col-md-6">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="required" data-msg="Please enter at least 8 chars of subject" />
+              <input type="text" class="form-control" name="surname" id="surname" placeholder="Apellidos" data-rule="required" data-msg="Please enter at least 8 chars of subject" />
               <div class="validation"></div>
             </div>
 			<div class="form-group col-md-6">
@@ -121,12 +121,136 @@
               <div class="validation"></div>
             </div>
             </div>
-            <div class="form-group">
+            
+			<div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="dni" id="dni" placeholder="DNI" data-rule="required" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+			<div class="form-group col-md-6">
+              <input type="text" class="form-control" name="ciudad" id="phone" placeholder="Lugar de residencia" data-rule="required" data-msg="Please enter at least 9 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            </div>
+			<div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="edad" id="edad" placeholder="Edad" data-rule="required" data-msg="Please enter age" />
+              <div class="validation"></div>
+            </div>
+			<div class="form-group col-md-6">
+              <input type="text" class="form-control" name="nacionalidad" id="nacionalidad" placeholder="Nacionalidad" data-rule="required" data-msg="nacionalidad" />
+              <div class="validation"></div>
+            </div>
+            </div>
+			<hr />
+			<h5>Formación</h5>
+			<div class="form-row">
+            <div class="form-group col-md-6">
+             <textarea class="form-control" name="formacion" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Formación general"></textarea>
+               <div class="validation"></div>
+            </div>
+			<div class="form-group col-md-6">
+               <textarea class="form-control" name="especifica" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Formación específica"></textarea>
+          	  <div class="validation"></div>
+            </div>
+            </div>
+			<hr />
+			<h5>Experiencia</h5>
+			<div class="form-row">
+            <div class="form-group col-md-6">
+				Cuidados de personas dependientes:<br>
+				si <input type="radio" name="cuidados" value="si">
+				no <input type="radio" name="cuidados" value="no"><br>
+            </div>
+			<div class="form-group col-md-6">
+            	Remunerados:<br>
+				si <input type="radio" name="remunerados" value="si">
+				no <input type="radio" name="remunerados" value="no"><br>
+            </div>
+            </div>
+			<div class="form-group">
+               <input type="text" class="form-control" name="duracion" id="duracion" placeholder="Meses de experiencia" data-rule="required" data-msg="experiencia" />
+              <div class="validation"></div>
+            </div>
+			<hr />
+			<h5>Tipo de cuidados</h5>
+			<div class="form-row">
+            <div class="form-group col-md-4">
+				Personas con dependencia total:<br>
+				si <input type="radio" name="dependencia" value="si">
+				no <input type="radio" name="dependencia" value="no"><br>
+            </div>
+			<div class="form-group col-md-4">
+            	Personas con dependencia parcial:<br>
+				si <input type="radio" name="parcial" value="si">
+				no <input type="radio" name="parcial" value="no"><br>
+            </div>
+			<div class="form-group col-md-4">
+            	Acompañamiento:<br>
+				si <input type="radio" name="acompanamiento" value="si">
+				no <input type="radio" name="acompanamiento" value="no"><br>
+            </div>
+            </div>
+			<hr />
+			<h5>Disponibilidad</h5>
+			<div class="form-row">
+            <div class="form-group col-md-6">
+				¿Podría trabajar como interno?<br>
+				si <input type="radio" name="interno" value="si">
+				no <input type="radio" name="interno" value="no"><br>
+            </div>
+			<div class="form-group col-md-6">
+            	Disponibilidad de media jornada<br>
+				si <input type="radio" name="media_jornada" value="si">
+				no <input type="radio" name="media_jornada" value="no"><br>
+            </div>
+            </div>
+			<hr />
+			<h5>Sustituciones</h5>
+			<div class="form-row">
+            <div class="form-group col-md-6">
+				¿Realizaría sustituciones los fines de semana?<br>
+				si <input type="radio" name="fines_semana" value="si">
+				no <input type="radio" name="fines_semana" value="no"><br>
+            </div>
+			<div class="form-group col-md-6">
+            	¿Realizaría sustituciones los entre semana?<br>
+				si <input type="radio" name="entre_semana" value="si">
+				no <input type="radio" name="entre_semana" value="no"><br>
+            </div>
+            </div>
+			<hr />
+			<h5>Desplazamiento</h5>
+			<div class="form-row">
+            <div class="form-group col-md-6">
+				¿Dispone de vehículo propio?<br>
+				si <input type="radio" name="vehiculo" value="si">
+				no <input type="radio" name="vehiculo" value="no"><br>
+            </div>
+			<div class="form-group col-md-6">
+            	Indique el radio de desplazamiento en Kilómetros: 
+				<input type="text" class="form-control" name="desplazamiento" id="desplazamiento" placeholder="Radio de desplazamiento" data-rule="required" data-msg="experiencia" />
+               <div class="validation"></div>
+            </div>
+            </div>
+			<div class="form-row">
+            <div class="form-group col-md-6">
+				Solo en su localidad: <br>
+				si <input type="radio" name="solo_localidad" value="si">
+				no <input type="radio" name="solo_localidad" value="no"><br>
+            </div>
+			<div class="form-group col-md-6">
+            	En toda la provincia: <br>
+				si <input type="radio" name="provincia" value="si">
+				no <input type="radio" name="provincia" value="no"><br>
+            </div>
+            </div>
+			<hr />	
+			<div class="form-group">
 			<div class="form-group">
               <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Cuéntanos qué te interesa"></textarea>
               <div class="validation"></div>
             </div>
-             			  
 			<input type="file"
                id="myfile" name="myfile"
                accept="application/pdf" /> <div class="validation"></div>
