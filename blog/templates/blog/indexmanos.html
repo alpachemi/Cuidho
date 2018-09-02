@@ -57,7 +57,7 @@
         <ul class="nav-menu">
           <li><a href="#services">Servicios</a></li>
           <li><a href="#call-to-action">Metodología</a></li>
-           <!--<li><a href="#skills">Tarifas</a></li>-->
+          <li><a href="#skills">Tarifas</a></li>
 		  <li><a href="#about">Conócenos</a></li>
           <li><a href="#contact">Contacta</a></li>
           <li><a href="/trabaja">Trabaja con nosotros</a></li>
@@ -322,7 +322,7 @@
               <h2 class="title"><a href="#">Coste</a></h2>
 				<ul>
 				<input type="button" class="button" value="Calcular" onclick="calc()" />
-				<h2><p id="result" name="r1" style="font-size:20px"></p>Euros/Mes</h2>
+				<h2>Desde: <p id="result" name="r1" style="font-size:20px"></p>Euros/Mes</h2>
 
 				<br /><br />
 				</ul>
@@ -703,7 +703,7 @@
               Manos para Respirar<br>
               Alicante<br>
               España<br>
-              <strong>Teléfono:</strong>+34658088228<br>
+              <strong>Teléfono:</strong>+34644240603<br>
               <strong>Email:</strong> info@manospararespirar.com<br>
             </p>
 
@@ -773,7 +773,7 @@ function calc() {
 
 		var lunes = 5.76;
 
-        result[textType] = (num1*num2*lunes) * 4 * 1.06;
+        result[textType] = Math.round((num1*num2*lunes) * 4 * 1.06* 100) / 100;
 
 
 }

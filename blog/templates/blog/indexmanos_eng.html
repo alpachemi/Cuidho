@@ -48,7 +48,8 @@
         <ul class="nav-menu">
          <!--<li class="menu-active"><a href="#intro">Home</a></li>-->
           <li><a href="#services">Services</a></li>
-          <li><a href="#call-to-action">methodology</a></li>
+          <li><a href="#call-to-action">methodology</a></li>		  
+          <li><a href="#skills">Pricing</a></li>
 		  <li><a href="#about">Meet Us</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="/trabaja">Work with us</a></li>
@@ -265,15 +266,15 @@
     </section><!-- #Metodologia -->
     <!--==========================
       Skills Section
-    ============================--> <!--
+    ============================--> 
     <section id="skills">
       <div class="container">
 
         <header class="section-header">
-          <h3>Nuestras Tarifas</h3>
-          <p>Indique el servicio que quiere disfrutar</p>
+          <h3>Our rates</h3>
+          <p>Service that you want to have</p>
         </header>
-		
+
 		<div class="row about-cols">
 
           <div class="col-md-4 wow fadeInUp">
@@ -282,27 +283,10 @@
                 <img src="/static/blog/images/about-mission.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="fas fa-calendar-alt"></i></div>
               </div>
-              <h2 class="title"><a href="#">Entre semana</a></h2>
-			  
-				<input type="text" class="form-control" placeholder="Horas" id="num1" name="num1" /><br />
-				
-			  <ul>
-				<h6>O bien, si se precisa como interno:</h6>
-				<input type="checkbox" name="interno" id="interno" class="css-checkbox">
-				<label for="interno" class="css-label">Interno</label><br />
-				</ul><hr /><ul>
-				<h6>Indique los días:</h6>
-				<input type="checkbox" name="lunes" id="lunes" class="css-checkbox">
-				<label for="lunes" class="css-label">Lunes</label><br />
-				<input type="checkbox" name="martes" id="martes" class="css-checkbox">
-				<label for="martes" class="css-label">Martes</label><br />
-				<input type="checkbox" name="miercoles" id="miercoles" class="css-checkbox">
-				<label for="miercoles" class="css-label">Miércoles</label><br />
-				<input type="checkbox" name="jueves" id="jueves" class="css-checkbox">
-				<label for="jueves" class="css-label">Jueves</label><br />
-				<input type="checkbox" name="viernes" id="viernes" class="css-checkbox">
-				<label for="viernes" class="css-label">viernes</label><br /><br />
-			  </ul>
+              <h2 class="title"><a href="#">Hours a day</a></h2>
+
+			 <input type="text" class="form-control" placeholder="Horas" id="num1" name="num1" /><br />
+
             </div>
           </div>
 
@@ -312,19 +296,9 @@
                 <img src="/static/blog/images/weekend.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-sunny"></i></div>
               </div>
-              <h2 class="title"><a href="#">Fin de Semana</a></h2>
+              <h2 class="title"><a href="#">Days a week</a></h2>
 				<input type="text" class="form-control" placeholder="Horas" id="num2" name="num2" /><br />
-			  <ul>
-				<h6>O bien, si se precisa como interno:</h6>
-				<input type="checkbox" name="interno2" id="interno2" class="css-checkbox">
-				<label for="interno2" class="css-label">Interno</label><br />
-			  </ul><hr /><ul>
-				<h6>Indique los días:</h6>
-				<input type="checkbox" name="Sabado" id="sabado" class="css-checkbox">
-				<label for="sabado" class="css-label">Sábado</label><br />
-				<input type="checkbox" name="Domingo" id="domingo" class="css-checkbox">
-				<label for="domingo" class="css-label">Domingo</label><br /><br />
-			  </ul>
+			  
 			  </div>
           </div>
 
@@ -334,19 +308,19 @@
                 <img src="/static/blog/images/about-vision.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="fas fa-check-circle"></i></div>
               </div>
-              <h2 class="title"><a href="#">Coste</a></h2>
+              <h2 class="title"><a href="#">Cost</a></h2>
 				<ul>
 				<input type="button" class="button" value="Calcular" onclick="calc()" />
-				<h2><p id="result" name="r1" style="font-size:20px"></p>Euros/Mes</h2>
-				
+				<h2>From: <p id="result" name="r1" style="font-size:20px"></p>Euros/Month</h2>
+
 				<br /><br />
 				</ul>
             </div>
           </div>
 
         </div>
-		
-	
+
+
     </section>
 
     <!--==========================
@@ -712,7 +686,7 @@
               Manos para Respirar<br>
               Alicante<br>
               España<br>
-              <strong>Teléfono:</strong>+34658088228<br>
+              <strong>Teléfono:</strong>+34644240603<br>
               <strong>Email:</strong> info@manospararespirar.com<br>
             </p>
 
@@ -780,44 +754,11 @@ function calc() {
         // retrieves the result element
         result = document.getElementById('result');
 
-		var lunes = 0;
-		var martes = 0;
-		var miercoles = 0;
-		var jueves = 0;
-		var viernes = 0;
-		var sabado = 0;
-		var domingo = 0;
-		
-		if( document.getElementById('lunes').checked ) {
-			lunes = 8;
-		}
-        if( document.getElementById('martes').checked ) {
-			martes = 8;
-		}
-		if( document.getElementById('miercoles').checked ) {
-			miercoles = 8;
-		}
-        if( document.getElementById('jueves').checked ) {
-			jueves = 8;
-		}
-		if( document.getElementById('viernes').checked ) {
-			viernes = 8;
-		}
-        if( document.getElementById('sabado').checked ) {
-			sabado = 10;
-		}
-        if( document.getElementById('domingo').checked ) {
-			domingo = 10;
-		}
-		if( document.getElementById('interno').checked ) {
-			num1 = 8;
-		}
-		if( document.getElementById('interno2').checked ) {
-			num2 = 8;
-		}
-        result[textType] = (num1*lunes+num1*martes+num1*miercoles+num1*jueves+num1*viernes + num2*sabado+num2*domingo) * 4 + 50;
-         
-    
+		var lunes = 5.76;
+
+        result[textType] = Math.round((num1*num2*lunes) * 4 * 1.06* 100) / 100;
+
+
 }
 </script>
 
