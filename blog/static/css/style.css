@@ -63,7 +63,20 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 15px;
   }
 }
-
+.video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    }
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    }
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
