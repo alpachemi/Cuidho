@@ -8,8 +8,8 @@ from django.core.files.storage import FileSystemStorage
 
 from .models import Worker
 from .models import Usuario
+from .models import Post
 from .forms import UsuarioForm
-from .forms import LoginForm
 from .forms import ContactForm
 from .forms import WorkForm
  
@@ -19,6 +19,18 @@ from .forms import WorkForm
 def thanks(request):
     return render(request, 'blog/mensaje.html')
 
+def bloga(request):
+    posts = Post.objects.filter(fecha__lte=timezone.now()).order_by('fecha')
+    return render(request, 'blog/indexa.html', {'posts': posts})
+
+def posta(request,postid):
+
+    post = Post.objects.get(id=postid)
+    return render(request, 'blog/post.html', {'post': post})
+
+def about(request):
+    return render(request, 'blog/about.html')
+	
 def trabaja(request):
     if request.method == 'POST':
 

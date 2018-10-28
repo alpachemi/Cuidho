@@ -8,4 +8,7 @@ urlpatterns = [
         url(r'^indexeng/$', views.indexeng),
         url(r'^indexfr/$', views.indexfr),
         url(r'^trabaja/$', views.trabaja),
+        url(r'^blog/$', views.bloga),
+        url(r'^posta/(?P<postid>\d+)/$', views.posta, name ='postid'),
+        url(r'^about/$', views.about),
 ]

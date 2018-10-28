@@ -1,6 +1,7 @@
 from django import forms
 
 from .models import Usuario
+from .models import Post
 
 class UsuarioForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -19,13 +20,15 @@ class UsuarioForm(forms.ModelForm):
         model = Usuario
         fields = ('nombre', 'apellidos','fecha_nacimiento','telefono_1','telefono_2','email','provincia','localidad','direccion','codigo_postal','sexo','carne_conducir','cuidador','password',)	
 		
-class LoginForm(forms.ModelForm):
-    #password = forms.CharField(widget=forms.PasswordInput()) 
-    #email = forms.EmailField(max_length=70)
-    
+class PostForm(forms.ModelForm):
+    titulo = forms.CharField(max_length=100) 
+    subtitulo = forms.CharField(max_length=100)
+    texto = forms.CharField(widget=forms.Textarea)
+    fecha = forms.DateTimeField()
+
     class Meta:
-       model = Usuario
-       fields = ('email', 'password',)	
+       model = Post
+       fields = ('titulo', 'subtitulo','texto', 'fecha',)	
 
 class ContactForm(forms.Form):
     subject = forms.CharField(max_length=100)

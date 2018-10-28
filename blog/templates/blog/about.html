@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blog - Manos para Respirar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'lib/fontawesome-free/web-fonts-with-css/css/fontawesome-all.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="/">Manos para Respirar</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#contact">Contacta</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('/static/blog/images/intro-carousel/hand.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Conócenos</h1>
+              <span class="subheading">Somos conscientes de que cada caso requiere un abordaje diferente y de la diversidad de situaciones familiares y de cuidados que necesita cada tipo de pacientes.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+	 <section id="about">
+    <div class="container">
+              <div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="/static/blog/images/mision.jpg" alt="Mision, cuidados a domicilio" class="img-fluid">
+                <div class="icon"><i class="fas fa-flag"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Nuestra Misión</a></h2>
+              <p>
+                Nuestro equipo centra su atención en prestar cuidados de apoyo de calidad que se ajusten a las necesidades diarias y particulares de las familias
+			  </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+              <div class="img">
+                <img src="/static/blog/images/vision.jpg" alt="Vision, cuidados a domicilio" class="img-fluid">
+                <div class="icon"><i class="ion-ios-eye"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Nuestra Visión</a></h2>
+              <p>Ser un referente en el cuidado centrado en la persona mejorando las condiciones de vida de las personas, sus cuidadoras/es y familias.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="/static/blog/images/valores.jpg" alt="Valores, cuidados a domicilio" class="img-fluid">
+                <div class="icon"><i class="fas fa-hands-helping"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Nuestros Valores</a></h2>
+				<ul>
+					<li ><p>Liderazgo: enfermeras al frente de una atención integrada para ofrecer una atención de calidad.</p></li>
+					<li ><p>Integridad: Nuestro mejor aval es nuestro trabajo y compromiso con el cuidado.</p></li>
+					<li ><p>Responsabilidad: Dando respuesta a las necesidades planteadas en base al compromiso adquirido.</p></li>
+				</ul>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+	
+    </section>
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Manos Para Respirar 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/clean-blog.min.js' %}"></script>
+
+  </body>
+
+</html>
