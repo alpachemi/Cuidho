@@ -20,7 +20,7 @@ def thanks(request):
     return render(request, 'blog/mensaje.html')
 
 def bloga(request):
-    posts = Post.objects.filter(fecha__lte=timezone.now()).order_by('fecha')
+    posts = Post.objects.filter(fecha__lte=timezone.now()).order_by('-fecha')
     return render(request, 'blog/indexa.html', {'posts': posts})
 
 def posta(request,postid):
