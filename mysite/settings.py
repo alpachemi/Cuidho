@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -24,7 +24,7 @@ SECURE_SSL_REDIRECT = True
 SECRET_KEY = '_*yom*1$*9saocx!7q0a(6h_p-@fn-#$a!s1+bvx*davs$01pj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['alpachemi.pythonanywhere.com', 'localhost', '127.0.0.1', 'www.manospararespirar.com']
 
