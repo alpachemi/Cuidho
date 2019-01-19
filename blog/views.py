@@ -275,13 +275,13 @@ def indexmanos(request):
         if form.is_valid():
             data = form.cleaned_data
             try:
-                #send_mail(
-                #    'Cliente','Asunto: '+ data['subject'] + 
-                #    ' El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
-                #    data['email'], #FROM
-                #    ['info@manospararespirar.com'],
-                #    fail_silently=False,
-                #)	
+                send_mail(
+                    'Cliente','Asunto: '+ data['subject'] + 
+                    ' El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
+                    data['email'], #FROM
+                    ['info@manospararespirar.com'],
+                    fail_silently=False,
+                )	
 			    
                 print(data['email'])
 				
