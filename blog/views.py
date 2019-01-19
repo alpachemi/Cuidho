@@ -220,16 +220,31 @@ def indexeng(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data
-            send_mail(
-                'Cliente','Asunto: '+ data['subject'] + 
-                ' El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
-                data['email'], #FROM
-                ['info@manospararespirar.com'],
-                fail_silently=False,
-            )
-      
-            print(data['email'])
-            return render(request, 'blog/mensaje.html', {})
+            try:
+                send_mail(
+                    'Cliente','Asunto: '+ data['subject'] + 
+                    ' El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
+                    data['email'], #FROM
+                    ['info@manospararespirar.com'],
+                    fail_silently=False,
+                )
+			    
+                print(data['email'])
+				
+                send_mail(
+                    'Contact received', 'We have received your information. We will get in touch with you as soon as possible. \nThank you very much for trusting us. \nBest wishes form the whole team',
+                    data['email'], #FROM
+                    [data['email']],
+                    fail_silently=False,
+                )
+				
+                return render(request, 'blog/mensaje.html', {})
+            except Exception as e:
+                trace_back = traceback.format_exc()
+                message = str(e)+ " " + str(trace_back)
+                print (message)
+                return render(request, 'blog/mensaje.html', {})
+				
     else:
         return render(request, 'blog/indexmanos_eng.html', {})
  
@@ -259,16 +274,30 @@ def indexmanos(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data
-            send_mail(
-                'Cliente','Asunto: '+ data['subject'] + 
-                ' El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
-                data['email'], #FROM
-                ['info@manospararespirar.com'],
-                fail_silently=False,
-            )
-      
-            print(data['email'])
-            return render(request, 'blog/mensaje.html', {})
+            try:
+                #send_mail(
+                #    'Cliente','Asunto: '+ data['subject'] + 
+                #    ' El cliente: ' + data['name'] + ' Con email: ' + data['email'] + ' Mensaje: ' + data['message'] + ' Telefono: ' + data['phone'],
+                #    data['email'], #FROM
+                #    ['info@manospararespirar.com'],
+                #    fail_silently=False,
+                #)	
+			    
+                print(data['email'])
+				
+                send_mail(
+                    'Información recibida', 'Hemos recibido su solicitud. Nos pondremos en contacto con usted lo antes posible. \n\nMuchas gracias por confiar en nosotros. \n\nUn saludo de todo el equipo',
+                    data['email'], #FROM
+                    [data['email']],
+                    fail_silently=False,
+                )
+				
+                return render(request, 'blog/mensaje.html', {})
+            except Exception as e:
+                trace_back = traceback.format_exc()
+                message = str(e)+ " " + str(trace_back)
+                print (message)
+                return render(request, 'blog/mensaje.html', {})
     else:
         return render(request, 'blog/indexmanos.html', {})
  
