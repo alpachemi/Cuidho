@@ -87,7 +87,7 @@
               <div class="carousel-content">
                 <h2>Cuidamos de los tuyos</h2>
                 <p>Somos un grupo de profesionales expertos en cuidados y en la formación de las personas que cuidan, sean familiares o profesionales.</p>
-                <a href="#skills" class="btn-get-started scrollto">Calcula precio</a>
+                <a href="#skills" class="btn-get-started scrollto">Calcula presupuesto</a>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
                 <h2>¿Qué podemos hacer por ti?</h2>
                 <p>Escuchar tus necesidades y aportar  soluciones. Siguiendo siempre una estrategia basada en una atención integral, con el objetivo de facilitar tu día a día, en tu vida como cuidadora.
                 Contacta con nosotros y valoraremos tu situación a la mayor brevedad posible.</p>
-                <a href="#skills" class="btn-get-started scrollto">Calcula precio</a>
+                <a href="#skills" class="btn-get-started scrollto">Calcula presupuesto</a>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@
                 <h2>Nuestra Metodología</h2>
                 <p>Cuidadoras con formación ofrecida por expertos con más de 20 años de experiencia.
 				Realizamos valoración individualizada para ofrecer el servicio que más se ajuste a tus necesidades</p>
-                <a href="#skills" class="btn-get-started scrollto">Calcula precio</a>
+                <a href="#skills" class="btn-get-started scrollto">Calcula presupuesto</a>
               </div>
             </div>
           </div>
@@ -771,8 +771,13 @@ function calc() {
 
         // retrieves the result element
         result = document.getElementById('result');
-
-		var base = 8.04;
+        if (num1 > 8){
+            num1 = 8;
+        }
+        if (num2 > 5){
+            num2 = 5;
+        }
+        var base = 8.04;
 
         result[textType] = Math.round((num1*num2*base) * 4 * 1.06* 100) / 100;
 
